@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 data class FollowResponse(
 
 	@field:SerializedName("login")
-	val login: String? = null,
+	val login: String,
 
 	@field:SerializedName("avatar_url")
-	val avatarUrl: String? = null,
+	val avatarUrl: String,
 
 )
