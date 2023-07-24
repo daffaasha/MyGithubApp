@@ -18,7 +18,7 @@ class UserRepository(
     private val localDataSource: LocalDataSource
 ) : IUserRepository {
 
-    override suspend fun getUserByUsername(username: String): Flow<Result<List<User>>> {
+    override fun getUserByUsername(username: String): Flow<Result<List<User>>> {
         return flow {
             remoteDataSource.getSearchUser(username).collect {
                 when (it) {
@@ -30,7 +30,7 @@ class UserRepository(
         }
     }
 
-    override suspend fun getDetailUser(username: String): Flow<Result<User>> {
+    override fun getDetailUser(username: String): Flow<Result<User>> {
         return flow {
             remoteDataSource.getDetailUser(username).collect {
                 when(it) {
@@ -50,7 +50,7 @@ class UserRepository(
         }
     }
 
-    override suspend fun getUserFollowers(username: String): Flow<Result<List<User>>> {
+    override fun getUserFollowers(username: String): Flow<Result<List<User>>> {
         return flow {
             remoteDataSource.getUserFollower(username).collect {
                 when(it) {
@@ -62,7 +62,7 @@ class UserRepository(
         }
     }
 
-    override suspend fun getUserFollowing(username: String): Flow<Result<List<User>>> {
+    override fun getUserFollowing(username: String): Flow<Result<List<User>>> {
         return flow {
             remoteDataSource.getUserFollowing(username).collect {
                 when(it) {
