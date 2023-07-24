@@ -52,4 +52,11 @@ object DataMapper {
         }
         return listUser
     }
+
+    fun domainToEntity(input: User): FavoriteEntity {
+        return FavoriteEntity(
+            username = input.username,
+            avatar = input.avatar
+        )
+    }
 }
