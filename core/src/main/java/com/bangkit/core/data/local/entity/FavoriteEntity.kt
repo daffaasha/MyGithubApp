@@ -9,7 +9,7 @@ data class FavoriteEntity (
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var userId: Int,
+    var userId: Int = 0,
 
     @ColumnInfo(name = "username")
     var username: String,
