@@ -5,4 +5,5 @@
     <string name="item_user_avatar">User Avatar</string>
     <string name="item_followers">Followers:</string>
     <string name="item_following">Following:</string>
+    <string name="empty_list">It\'s Empty Here</string>
 </resources>
