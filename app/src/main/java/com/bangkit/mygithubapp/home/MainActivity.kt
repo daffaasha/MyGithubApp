@@ -32,6 +32,15 @@ class MainActivity : AppCompatActivity() {
         setupObservers()
     }
 
+    private fun moveToChatActivity() {
+        try {
+            startActivity(Intent(this, Class.forName("com.bangkit.favorite.FavoriteActivity")))
+        } catch (e: Exception){
+            showToast(getString(R.string.module_not_found), this)
+        }
+
+    }
+
     private fun setupObservers() {
         viewModel.listUser.observe(this) { result ->
             when (result) {
@@ -76,6 +85,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun moveToFavoriteActivity() {
+        startActivity(Intent(this, Class.forName("com.bangkit.mygithubapp.favorite.FavoriteActivity")))
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
@@ -103,6 +116,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.favorite -> {
+                moveToChatActivity()
             }
         }
         return super.onOptionsItemSelected(item)

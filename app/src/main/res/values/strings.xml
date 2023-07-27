@@ -16,4 +16,5 @@
     <string name="add_favorite">User Added To Favorite</string>
     <string name="remove_favorite">User Removed To Favorite</string>
     <string name="title_favorite">Favorite</string>
+    <string name="module_not_found">Module Not Found</string>
 </resources>
