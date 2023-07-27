@@ -1,4 +1,4 @@
-package com.bangkit.mygithubapp.favorite
+package com.bangkit.favorite
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.mygithubapp.databinding.ActivityFavoriteBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.bangkit.core.domain.model.User
+import com.bangkit.favorite.di.favoriteModule
 import com.bangkit.mygithubapp.adapter.UserListAdapter
 import com.bangkit.mygithubapp.detail.DetailActivity
+import org.koin.core.context.loadKoinModules
 
 class FavoriteActivity : AppCompatActivity() {
 
@@ -20,6 +22,7 @@ class FavoriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         setupObserver()
     }

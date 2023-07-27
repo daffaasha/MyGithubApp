@@ -1,4 +1,4 @@
-package com.bangkit.mygithubapp.favorite
+package com.bangkit.favorite
 
 import android.util.Log
 import androidx.lifecycle.LiveData

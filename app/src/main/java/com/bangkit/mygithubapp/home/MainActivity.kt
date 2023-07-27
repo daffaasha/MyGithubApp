@@ -16,7 +16,6 @@ import com.bangkit.mygithubapp.R
 import com.bangkit.mygithubapp.adapter.UserListAdapter
 import com.bangkit.mygithubapp.databinding.ActivityMainBinding
 import com.bangkit.mygithubapp.detail.DetailActivity
-import com.bangkit.mygithubapp.favorite.FavoriteActivity
 import com.bangkit.mygithubapp.util.showToast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -104,8 +103,6 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.favorite -> {
-                val intent = Intent(this, FavoriteActivity::class.java)
-                startActivity(intent)
             }
         }
         return super.onOptionsItemSelected(item)
