@@ -12,4 +12,6 @@ class LocalDataSource(private val favoriteDao: FavoriteDao) {
 
     fun insertFavorite(favorite: FavoriteEntity) = favoriteDao.insertFavorite(favorite)
 
+    fun checkFavorite(userName: String) = favoriteDao.checkFavorite(userName)
+
 }

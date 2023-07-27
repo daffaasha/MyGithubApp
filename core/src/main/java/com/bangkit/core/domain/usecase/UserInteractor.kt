@@ -19,4 +19,5 @@ class UserInteractor(private val userRepo: IUserRepository): UserUseCase {
 
     override suspend fun deleteFavorite(user: User) = userRepo.deleteFavorite(user)
 
+    override fun checkFavorite(username: String) = userRepo.checkFavorite(username)
 }

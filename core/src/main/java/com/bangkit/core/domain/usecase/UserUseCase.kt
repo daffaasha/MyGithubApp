@@ -12,4 +12,5 @@ interface UserUseCase {
     fun getUserFollowing(username: String): Flow<Result<List<User>>>
     suspend fun setFavorite(user: User)
     suspend fun deleteFavorite(user: User)
+    fun checkFavorite(username: String): Flow<List<User>>
 }

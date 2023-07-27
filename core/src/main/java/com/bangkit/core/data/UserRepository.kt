@@ -39,5 +39,13 @@ class UserRepository(
     override suspend fun deleteFavorite(user: User) {
         val data = DataMapper.domainToEntity(user)
         localDataSource.deleteFavorite(data)
+    override fun checkFavorite(username: String) = flow {
+        localDataSource.checkFavorite(username).map {
+            if (it.isEmpty()) {
+                emit(emptyList<User>())
+            } else {
+                emit(DataMapper.entityToDomain(it))
+            }
+        }
     }
 }

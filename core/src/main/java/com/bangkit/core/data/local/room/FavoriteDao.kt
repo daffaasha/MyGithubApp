@@ -20,4 +20,6 @@ interface FavoriteDao {
     @Query("SELECT * FROM favorite_user")
     fun getAllFavorite(): Flow<List<FavoriteEntity>>
 
+    @Query("SELECT * FROM favorite_user WHERE username = :userName")
+    fun checkFavorite(userName: String): Flow<List<FavoriteEntity>>
 }
