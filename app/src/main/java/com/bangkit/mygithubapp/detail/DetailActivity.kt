@@ -6,6 +6,7 @@ import android.view.View
 import com.bangkit.core.data.Result
 import com.bangkit.core.domain.model.User
 import com.bangkit.mygithubapp.R
+import com.bangkit.mygithubapp.adapter.SectionPagerAdapter
 import com.bangkit.mygithubapp.databinding.ActivityDetailBinding
 import com.bangkit.mygithubapp.util.loadCircleImage
 import com.bangkit.mygithubapp.util.showToast

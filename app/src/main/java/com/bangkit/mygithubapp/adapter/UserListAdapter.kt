@@ -1,4 +1,4 @@
-package com.bangkit.mygithubapp.home
+package com.bangkit.mygithubapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,10 +7,10 @@ import com.bangkit.core.domain.model.User
 import com.bangkit.mygithubapp.databinding.UserItemBinding
 import com.bangkit.mygithubapp.util.loadImage
 
-class HomeAdapter(
+class UserListAdapter(
     private val listUser: List<User>,
     private val onClick: (User) -> Unit
-) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+) : RecyclerView.Adapter<UserListAdapter.HomeViewHolder>() {
 
     class HomeViewHolder(var binding : UserItemBinding) : RecyclerView.ViewHolder(binding.root)
 

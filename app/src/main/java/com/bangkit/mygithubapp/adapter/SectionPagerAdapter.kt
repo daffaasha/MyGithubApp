@@ -1,4 +1,4 @@
-package com.bangkit.mygithubapp.detail
+package com.bangkit.mygithubapp.adapter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

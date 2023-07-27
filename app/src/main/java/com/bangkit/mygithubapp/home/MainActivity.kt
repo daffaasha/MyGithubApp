@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.core.data.Result
 import com.bangkit.core.domain.model.User
 import com.bangkit.mygithubapp.R
+import com.bangkit.mygithubapp.adapter.UserListAdapter
 import com.bangkit.mygithubapp.databinding.ActivityMainBinding
 import com.bangkit.mygithubapp.detail.DetailActivity
 import com.bangkit.mygithubapp.favorite.FavoriteActivity
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setupRecyclerView(listUser: List<User>) {
         binding.rvUser.layoutManager = LinearLayoutManager(this)
-        val adapter = HomeAdapter(listUser) {
+        val adapter = UserListAdapter(listUser) {
             val intent = Intent(this@MainActivity, DetailActivity::class.java)
             intent.putExtra(DetailActivity.EXTRA_USERNAME, it.username)
             startActivity(intent)
