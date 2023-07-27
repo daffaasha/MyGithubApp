@@ -17,3 +17,11 @@ fun ImageView.loadImage(url: String) {
         .load(url)
         .into(this)
 }
+
+fun ImageView.loadCircleImage(url: String) {
+    Glide
+        .with(this.context)
+        .load(url)
+        .circleCrop()
+        .into(this)
+}
