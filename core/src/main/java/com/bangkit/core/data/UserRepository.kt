@@ -31,14 +31,15 @@ class UserRepository(
 
     override fun getUserFollowing(username: String) = remoteDataSource.getUserFollowing(username)
 
-    override suspend fun setFavorite(user: User) {
+    override fun setFavorite(user: User) {
         val data = DataMapper.domainToEntity(user)
         localDataSource.insertFavorite(data)
     }
 
-    override suspend fun deleteFavorite(user: User) {
-        val data = DataMapper.domainToEntity(user)
-        localDataSource.deleteFavorite(data)
+    override fun deleteFavorite(username: String) {
+        localDataSource.deleteFavorite(username)
+    }
+
     override fun checkFavorite(username: String) = flow {
         localDataSource.checkFavorite(username).map {
             if (it.isEmpty()) {
@@ -48,4 +49,6 @@ class UserRepository(
             }
         }
     }
+
+
 }

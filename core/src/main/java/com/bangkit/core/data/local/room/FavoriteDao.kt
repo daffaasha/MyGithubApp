@@ -14,8 +14,8 @@ interface FavoriteDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFavorite(user: FavoriteEntity)
 
-    @Delete
-    fun deleteFavorite(user: FavoriteEntity)
+    @Query("DELETE FROM favorite_user WHERE username = :userName")
+    fun deleteFavorite(userName: String)
 
     @Query("SELECT * FROM favorite_user")
     fun getAllFavorite(): Flow<List<FavoriteEntity>>
