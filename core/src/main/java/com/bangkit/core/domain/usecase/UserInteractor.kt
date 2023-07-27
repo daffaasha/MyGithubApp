@@ -2,7 +2,6 @@ package com.bangkit.core.domain.usecase
 
 import com.bangkit.core.domain.model.User
 import com.bangkit.core.domain.repository.IUserRepository
-import com.bangkit.core.data.Result
 
 class UserInteractor(private val userRepo: IUserRepository): UserUseCase {
     override fun getUserByUsername(username: String) = userRepo.getUserByUsername(username)
@@ -15,8 +14,9 @@ class UserInteractor(private val userRepo: IUserRepository): UserUseCase {
 
     override fun getUserFollowing(username: String) = userRepo.getUserFollowing(username)
 
-    override suspend fun setFavorite(user: User) = userRepo.setFavorite(user)
+    override fun setFavorite(user: User) = userRepo.setFavorite(user)
 
-    override suspend fun deleteFavorite(user: User) = userRepo.deleteFavorite(user)
+    override fun deleteFavorite(username: String) = userRepo.deleteFavorite(username)
 
+    override fun checkFavorite(username: String) = userRepo.checkFavorite(username)
 }

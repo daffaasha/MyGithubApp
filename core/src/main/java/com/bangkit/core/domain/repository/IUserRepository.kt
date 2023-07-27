@@ -11,6 +11,7 @@ interface IUserRepository {
     fun getAllFavoriteUser(): Flow<List<User>>
     fun getUserFollowers(username: String): Flow<Result<List<User>>>
     fun getUserFollowing(username: String): Flow<Result<List<User>>>
-    suspend fun setFavorite(user: User)
-    suspend fun deleteFavorite(user: User)
+    fun setFavorite(user: User)
+    fun deleteFavorite(username: String)
+    fun checkFavorite(username: String): Flow<List<User>>
 }
