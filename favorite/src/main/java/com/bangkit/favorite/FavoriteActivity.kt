@@ -23,6 +23,7 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        loadKoinModules(favoriteModule)
 
         setupObserver()
     }
