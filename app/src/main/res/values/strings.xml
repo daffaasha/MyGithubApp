@@ -8,4 +8,10 @@
     <string name="empty_list">It\'s Empty Here</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_following">Not Following Anyone</string>
+    <string name="empty_follower">There\'s No Follower</string>
+    <string name="follower_count">Followers: %s</string>
+    <string name="following_count">Following: %s</string>
+    <string name="add_favorite">User Added To Favorite</string>
+    <string name="remove_favorite">User Removed To Favorite</string>
 </resources>
