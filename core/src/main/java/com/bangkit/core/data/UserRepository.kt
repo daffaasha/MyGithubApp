@@ -20,10 +20,8 @@ class UserRepository(
     override fun getDetailUser(username: String) = remoteDataSource.getDetailUser(username)
 
     override fun getAllFavoriteUser(): Flow<List<User>> {
-        return flow {
-            localDataSource.getAllFavorite().map {
-                emit(DataMapper.entityToDomain(it))
-            }
+        return localDataSource.getAllFavorite().map {
+            DataMapper.entityToDomain(it)
         }
     }
 
