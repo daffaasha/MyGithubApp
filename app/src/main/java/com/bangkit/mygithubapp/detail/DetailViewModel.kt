@@ -43,7 +43,7 @@ class DetailViewModel(private val useCase: UserUseCase) : ViewModel() {
     fun checkFavorite(userName: String) {
         viewModelScope.launch {
             useCase.checkFavorite(userName).collect {
-                _isFavorite.value = it.isEmpty()
+                _isFavorite.value = it.isNotEmpty()
             }
         }
     }
