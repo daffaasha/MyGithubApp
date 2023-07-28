@@ -38,15 +38,8 @@ class UserRepository(
         localDataSource.deleteFavorite(username)
     }
 
-    override fun checkFavorite(username: String) = flow {
+    override fun checkFavorite(username: String) =
         localDataSource.checkFavorite(username).map {
-            if (it.isEmpty()) {
-                emit(emptyList<User>())
-            } else {
-                emit(DataMapper.entityToDomain(it))
-            }
+            DataMapper.entityToDomain(it)
         }
-    }
-
-
 }
