@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.mygithubapp.databinding.ActivityFavoriteBinding
+import com.bangkit.favorite.databinding.ActivityFavoriteBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.bangkit.core.domain.model.User
 import com.bangkit.favorite.di.favoriteModule
