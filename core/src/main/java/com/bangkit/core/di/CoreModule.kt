@@ -7,6 +7,8 @@ import com.bangkit.core.data.local.room.FavoriteDatabase
 import com.bangkit.core.data.remote.RemoteDataSource
 import com.bangkit.core.data.remote.network.ApiService
 import com.bangkit.core.domain.repository.IUserRepository
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,11 +21,13 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<FavoriteDatabase>().favoriteDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             FavoriteDatabase::class.java,
             "favorite_user.db"
-        ).build()
+        ).openHelperFactory(factory).build()
     }
 }
 
