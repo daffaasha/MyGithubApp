@@ -6,6 +6,7 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test:core:$test_core"
     implementation "androidx.multidex:multidex:$multidex_version"
 
     implementation "androidx.cardview:cardview:$cardview_version"
