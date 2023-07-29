@@ -1,14 +1,11 @@
 package com.bangkit.favorite
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bangkit.core.domain.model.User
 import com.bangkit.core.domain.usecase.UserUseCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class FavoriteViewModel(private val useCase: UserUseCase) : ViewModel() {
