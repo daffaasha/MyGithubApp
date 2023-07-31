@@ -5,9 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.core.domain.model.User
 import com.bangkit.mygithubapp.databinding.FollowUserItemBinding
-import com.bangkit.mygithubapp.databinding.UserItemBinding
 import com.bangkit.mygithubapp.util.loadCircleImage
-import com.bangkit.mygithubapp.util.loadImage
 
 class UserFollowAdapter(
     private val listFollow: List<User>

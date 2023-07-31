@@ -2,7 +2,6 @@ package com.bangkit.core.data.local
 
 import com.bangkit.core.data.local.entity.FavoriteEntity
 import com.bangkit.core.data.local.room.FavoriteDao
-import kotlinx.coroutines.flow.Flow
 
 class LocalDataSource(private val favoriteDao: FavoriteDao) {
 

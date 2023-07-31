@@ -42,7 +42,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:contentDescription="profile_pict" />
 
                 <TextView
                     android:id="@+id/tv_name"
